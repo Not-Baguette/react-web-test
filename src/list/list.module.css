@@ -1,0 +1,27 @@
+.container {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    overflow: hidden;
+    min-width: 500px;
+    max-height: 50px; /* Initial height to only show the title */
+    backdrop-filter: blur(7px);
+}
+
+.container.open {
+    max-height: 300px; /* Expand height when open */
+    transition: all 0.3s ease;
+}
+
+.content h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.list {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
