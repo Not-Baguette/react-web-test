@@ -2,6 +2,7 @@ import './App.css'
 import Card from "./card/Card.jsx"
 import Header from "./header/Header.jsx"
 import List from "./list/List.jsx"
+import Profile from "./profile/Profile.jsx";
 import profilePic from "./assets/pfp.webp";
 import reactPic from "./assets/react.svg";
 
@@ -12,17 +13,21 @@ function App() {
     age: 18,
     location: "Jakarta, Indonesia",
     hobbies: ["Coding", "Gaming", "Eating"],
-    languages: ["English", "Indonesian", "German"]
+    languages: ["English", "Indonesian", "German"],
   }
   return (
     <>
       <Header /> 
-      <Card picture={profilePic} title="Baguette" description="Meow" isFramework={false} upstream="https://not-baguette.github.io"/>
+      <div className="inline">
+      <Profile img={profilePic} title={personalInfo.name} textFront="Hi! Click me!" textBack="Bah" upstream="https://not-baguette.github.io"/>
+      </div>
+
       <h1>About Me</h1>
       <div className="inline">
         <List title="Hobbies" items={personalInfo.hobbies} />
         <List title="Languages" items={personalInfo.languages} />
       </div>
+      
       {/* Skills page */}
       <h1>My Skills</h1>
       <div className="inline">
